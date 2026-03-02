@@ -65,13 +65,9 @@ int main(){
     node2->next = node3;
     node3->next = node4;
     node4->next = NULL;
-
     cout<<"Enter position and value: ";
     cin>>position>>value;
-
     head = insertatmiddle(head,value,position);
-
     display(head);
-
     return 0;
 }

@@ -1,11 +1,9 @@
 #include<iostream>
 using namespace std;
-
 struct Node{
     int data;
     Node *next=NULL;
 };
-
 Node * insertatbeg(Node *head,int value){
     Node* newnode = new Node;
     newnode->data = value;
