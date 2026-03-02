@@ -37,7 +37,37 @@ Node* deleteanywhere(Node* head, int position){
 
     return head;
 }
+void display(Node* head){
+    Node* temp=head;
+    int i=1;
+    while(temp!=NULL){
+        cout<<"The"<<i<<"th node is"<<temp->data<<endl;
+        temp=temp->next;
+        i++;
+    }
+}
 int main(){
-    
+    Node *head=NULL;
+    int position;
+    //Initialising nodes
+    Node* node1=new Node;
+    Node *node2=new Node;
+    Node *node3=new Node;
+    Node*  node4=new Node;
+//Assigning values and connecting them
+    head=node1;
+    node1->data=10;
+    node1->next=node2;
+    node2->data=20;
+    node2->next=node3;
+    node3->data=30;
+    node3->next=node4;
+    node4->data=40;
+    node4->next=NULL;
+    display(head);
+    cout<<"enter the position of the linked list to be deleted(starting from 1)";
+    cin>>position;
+    head=deleteanywhere(head,position);
+    display(head);
     return 0;
 }
