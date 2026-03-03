@@ -1,14 +1,14 @@
-// Linear Search - Using if Comparison
+// Linear Search - Recursive Approach
 #include <stdio.h>
 
-int linearSearch(int arr[], int n, int key) {
-    int i;
-    for (i = 0; i < n; i++) {
-        if (arr[i] == key) {
-            return i; // Element found, return index
-        }
+int linearSearchRecursive(int arr[], int n, int key, int index) {
+    if (index >= n) {
+        return -1; // Base case: element not found
     }
-    return -1; // Element not found
+    if (arr[index] == key) {
+        return index; // Base case: element found
+    }
+    return linearSearchRecursive(arr, n, key, index + 1); // Recursive call
 }
 
 int main() {
@@ -26,7 +26,7 @@ int main() {
     printf("Enter the element to search: ");
     scanf("%d", &key);
 
-    result = linearSearch(arr, n, key);
+    result = linearSearchRecursive(arr, n, key, 0);
 
     if (result == -1) {
         printf("Element %d not found in the array.\n", key);
