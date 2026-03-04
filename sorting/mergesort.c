@@ -4,11 +4,11 @@
 
 int a[Max];
 int b[Max];
-
+//remember to:1) initialise at first 2) if(h>mid) and 3) copy elements of b[i] to a[i]
 void Merge(int low, int mid, int high){
 
-    int h = low;
-    int i = low;
+    int h = low;//remember 
+    int i = low;//remmember
     int j = mid + 1;
 
     while(h <= mid && j <= high){
