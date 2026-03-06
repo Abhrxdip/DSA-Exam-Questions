@@ -1,13 +1,16 @@
 /*
- * Program: Merge Two Linked Lists
- * Description: This program demonstrates different methods to merge two singly linked lists.
+ * Program: Merge Two Linked Lists (Append Method)
+ * Description: This program merges two singly linked lists by appending the second list
+ *              to the end of the first list. This is the simplest merging approach.
  * 
- * Methods implemented:
- *   1. Append: Merge by appending second list to the end of first list
- *   2. Alternating: Merge by alternating nodes from both lists
- *   3. Sorted Merge: Merge two sorted lists into one sorted list (maintaining order)
+ * Algorithm:
+ *   1. If list1 is empty, return list2
+ *   2. If list2 is empty, return list1
+ *   3. Traverse to the end of list1
+ *   4. Connect the last node of list1 to the head of list2
  * 
- * Time Complexity: O(n + m) where n and m are lengths of the two lists
+ * Time Complexity: O(n) where n is the length of list1
+ * Space Complexity: O(1) - in-place merging
  */
 
 #include <stdio.h>
